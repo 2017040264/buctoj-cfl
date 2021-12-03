@@ -13,8 +13,9 @@ def main():
     listb=[]
     for line in sys.stdin:
         listc=line.split()
+        #print('aaa')
         listb.append(listc)
-    #print(listb)
+    print(listb)
 
     for lista in listb:
         if lista[0] not in dicta.keys():
