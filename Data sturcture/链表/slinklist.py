@@ -116,6 +116,30 @@ class SlinkList:
             node = node.next
         return lst
 
+    # 构造带环结点，n是闭合结点的位置
+    def setCricle(self,n):
+        if n>self.length or n<0:
+            return  False
+
+        # 规定超过3个结点才能构造环
+        if self.length>3:
+            p1=self.phead
+            for i in range(n):
+                p1=p1.next
+
+            # 记录闭合结点
+            node=p1
+
+            while p1.next!=None:
+                p1=p1.next
+
+            # 构造环
+            p1.next=node
+            print('尾节点指向值为{}的结点'.format(node.data))
+            return True
+
+
+
 
 def main():
     singleLinkList = SlinkList()
