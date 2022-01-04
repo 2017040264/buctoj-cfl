@@ -20,6 +20,7 @@ class TreeNode(object):
         #self.dot=Digraph(comment='Binary Tree')
 
 
+# 二叉树
 class BTree(object):
 
     def __init__(self,root=None):
